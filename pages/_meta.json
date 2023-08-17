@@ -1,0 +1,13 @@
+{
+    "index": {
+        "title": "Notícias",
+        "type": "page",
+        "theme": {
+            "typesetting": "article"
+        }
+    },
+    "documentacao":{
+        "title": "Documentação",
+        "type": "page"
+    }
+}
