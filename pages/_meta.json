@@ -10,12 +10,8 @@
         "title": "Documentação",
         "type": "page"
     },
-    "personagens":{
-        "title": "Personagens",
-        "type": "page"
-    },
-    "world":{
-        "title": "World Map",
+    "campanha":{
+        "title": "Campanha",
         "type": "page"
     }
 }

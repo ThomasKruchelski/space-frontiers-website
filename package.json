@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cobe": "^0.6.3",
     "next": "^13.4.16",
     "nextra": "^2.11.0",
     "nextra-theme-docs": "^2.11.0",
