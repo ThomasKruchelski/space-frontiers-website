@@ -8,6 +8,7 @@ export default function App() {
 
   useEffect(() => {
     let phi = 0;
+    let mapSamples = 6000;
 
     const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
@@ -32,6 +33,12 @@ export default function App() {
         // `state` will be an empty object, return updated params.
         state.phi = phi;
         phi += 0.005;
+
+        if(mapSamples < 20000){
+            state.mapSamples = mapSamples;
+            mapSamples += 150;
+            console.log(mapSamples)
+        }
       }
     });
 
