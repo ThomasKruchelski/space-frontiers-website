@@ -1,4 +1,25 @@
-.flex {
+.flex{
     display: flex;
-    color: red
+}
+
+.relative{
+    position: relative;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.float-right{
+    float: right;
+}
+
+/* Remover depois! */
+
+.nextra-search{
+    display: none !important;
 }

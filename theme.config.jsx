@@ -1,10 +1,10 @@
 export default {
-    logo: <span>Simple Space System</span>,
+    logo: <span>Space Frontiers</span>,
     project: {
       link: 'https://github.com/ThomasKruchelski/simple-space-system.git'
     },
     search: {
-        placeholder:"Faça sua busca..."
+        placeholder:"Faça sua busca...",
     }
     // ... other theme options
   }
