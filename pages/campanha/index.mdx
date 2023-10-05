@@ -1,9 +1,5 @@
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
-
-// https://github.com/shuding/cobe
-
-
 import { useSpring } from 'react-spring';
 
 export function Cobe() {
@@ -20,6 +16,7 @@ export function Cobe() {
     },
   }));
   useEffect(() => {
+    let phi = 0;
     let width = 0;
     const onResize = () => canvasRef.current && (width = canvasRef.current.offsetWidth)
     window.addEventListener('resize', onResize)
@@ -39,7 +36,13 @@ export function Cobe() {
       glowColor: [1.2, 1.2, 1.2],
       markers: [],
       onRender: (state) => {
-        state.phi = r.get()
+        // This prevents rotation while dragging
+        if (!pointerInteracting.current) {
+          // Called on every animation frame.
+          // `state` will be an empty object, return updated params.
+          phi += 0.005
+        } 
+        state.phi = phi + r.get()
         state.width = width * 2
         state.height = width * 2
       }
@@ -100,7 +103,3 @@ export function Cobe() {
 }
 
 <Cobe/>
-
-Change the `phi` value when moving on the canvas, with [React Spring](https://react-spring.dev) to smoothen it.
-
-[View source of this example on GitHub](https://github.com/shuding/cobe/blob/main/website/pages/docs/showcases/draggable.mdx)
