@@ -8,8 +8,7 @@
     },
     "documentacao":{
         "title": "Documentação",
-        "type": "page",
-        "display":"hidden"
+        "type": "page"
     },
     "campanha":{
         "title": "Campanha",
